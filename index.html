@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMojo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="ust-menu">
+        <div class="arama-kutusu">
+            <input type="text" id="filmAra" placeholder="Search movies, series...">
+            <button id="zarButon" onclick="rastgeleFilmOner()" title="Suggest a movie.">🎲</button>
+            <button id="araButon">🔍</button>
+        </div>
+        
+        <div class="buton-grubu">
+            <button id="favoriBtn" onclick="favoriListesiniGoster()">
+                ❤️ Favorites <span id="favori-sayisi">0</span>
+            </button>
+            <button id="dark-mode-btn">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <main id="filmListesi">
+        <div class="hazir-mesaj">
+            <h2>Welcome to MovieMojo! 🎬</h2>
+            <p>Find your next favorite movie or <strong>roll the dice</strong> for a magical suggestion!</p>
+        </div>
+    </main>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-icerik">
+            <span class="kapat" onclick="fragmaniKapat()">&times;</span>
+            <iframe id="fragmanFrame" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
